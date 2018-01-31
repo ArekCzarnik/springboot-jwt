@@ -19,9 +19,10 @@ public class ResourceController {
 
 
     @RequestMapping(value = "/cities", method = RequestMethod.GET)
-    public List<String> getCit() {
-        List cities = new ArrayList();
+    public List<String> getCities() {
+        List<String> cities = new ArrayList();
         cities.add("test");
+        cities.add("test2");
         return cities;
     }
 
