@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -15,6 +16,14 @@ import java.util.List;
 public class ResourceController {
     @Autowired
     private GenericService userService;
+
+
+    @RequestMapping(value = "/cities", method = RequestMethod.GET)
+    public List<String> getCit() {
+        List cities = new ArrayList();
+        cities.add("test");
+        return cities;
+    }
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     @PreAuthorize("hasAuthority('ADMIN_USER')")

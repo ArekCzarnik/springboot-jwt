@@ -43,54 +43,10 @@ Use one of the several ways of running a Spring Boot application. Below are just
       "jti": "0bd8e450-7f5c-49f3-91f0-5775b7bcc00f"
     }`
 
- 2. Use the token to access resources through your RESTful API
-
-    * Access content available to all authenticated users
-
-        Use the generated token  as the value of the Bearer in the Authorization header as follows:
-        `curl  http://localhost:8080/springjwt/cities -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4uYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNDk0NDU0MjgyLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIiwiQURNSU5fVVNFUiJdLCJqdGkiOiIwYmQ4ZTQ1MC03ZjVjLTQ5ZjMtOTFmMC01Nzc1YjdiY2MwMGYiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.rvEAa4dIz8hT8uxzfjkEJKG982Ree5PdUW17KtFyeec" `
-
-        The response will be:
-        `
-        [
-          {
-            "id": 1,
-            "name": "Bamako"
-          },
-          {
-            "id": 2,
-            "name": "Nonkon"
-          },
-          {
-            "id": 3,
-            "name": "Houston"
-          },
-          {
-            "id": 4,
-            "name": "Toronto"
-          },
-          {
-            "id": 5,
-            "name": "New York"
-          },
-          {
-            "id": 6,
-            "name": "Mopti"
-          },
-          {
-            "id": 7,
-            "name": "Koulikoro"
-          },
-          {
-            "id": 8,
-            "name": "Moscow"
-          }
-        ]`
-
-    * Access content available only to an admin user
+ 2. Access content available only to an admin user
 
        As with the previous example first generate an access token for the admin user with the credentials provided above then run
-           `curl  http://localhost:8080/springjwt/users -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4uYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNDk0NDU0OTIzLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIiwiQURNSU5fVVNFUiJdLCJqdGkiOiIyMTAzMjRmMS05MTE0LTQ1NGEtODRmMy1hZjUzZmUxNzdjNzIiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.OuprVlyNnKuLkoQmP8shP38G3Hje91GBhu4E0HD2Fes" `
+           `curl  http://localhost:8080/springjwt/users -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiam9obi5kb2UiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTE3MjgwNzI1LCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIl0sImp0aSI6IjEyZDc0ZjQ2LTBjZTYtNDRjZS1hZjI4LTk3YzlkMjRhODM2YSIsImNsaWVudF9pZCI6InRlc3Rqd3RjbGllbnRpZCJ9.rC1CdjVz9wO5jfPx1CuMN9CSoUKRTRKWR-0ZUEvke7Q" `
            The result will be:
            `
            [
