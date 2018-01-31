@@ -32,6 +32,7 @@ Use one of the several ways of running a Spring Boot application. Below are just
 
    For this specific application, to generate an access token for the non-admin user john.doe, run:
    `$ curl testjwtclientid:XY7kmzoNzl100@localhost:8080/oauth/token -d grant_type=password -d username=john.doe -d password=jwtpass`
+    
     You'll receive a response similar to below
 
     `
@@ -47,7 +48,9 @@ Use one of the several ways of running a Spring Boot application. Below are just
 
        As with the previous example first generate an access token for the admin user with the credentials provided above then run
            `curl  http://localhost:8080/springjwt/users -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiam9obi5kb2UiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTE3MjgwNzI1LCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIl0sImp0aSI6IjEyZDc0ZjQ2LTBjZTYtNDRjZS1hZjI4LTk3YzlkMjRhODM2YSIsImNsaWVudF9pZCI6InRlc3Rqd3RjbGllbnRpZCJ9.rC1CdjVz9wO5jfPx1CuMN9CSoUKRTRKWR-0ZUEvke7Q" `
+          
            The result will be:
+          
            `
            [
              {
